@@ -1,6 +1,5 @@
 import api from "./api";
 
-// Obtener todos los servicios
 export const obtenerServicios = async () => {
   try {
     const response = await api.get("/reserva/servicios");

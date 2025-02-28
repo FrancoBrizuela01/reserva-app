@@ -19,7 +19,7 @@ const ReservaApp = () => {
   const handleReservar = async (nuevaReserva) => {
     try {
       await crearReserva(nuevaReserva);
-      cargarReservas(); // Refrescar la lista de reservas después de crear una nueva
+      cargarReservas();
     } catch (error) {
       alert(error.response?.data || "Error al crear la reserva");
     }
@@ -28,7 +28,7 @@ const ReservaApp = () => {
   return (
     <Paper elevation={6} sx={{ p: 4, borderRadius: 4, backgroundColor: "background.paper" }}>
       <Typography variant="h4" align="center" gutterBottom color="primary">
-        📅 Gestión de Reservas
+        Gestión de Reservas
       </Typography>
       <Box sx={{ mb: 3 }}>
         <ReservaForm onReservar={handleReservar} reservas={reservas} />

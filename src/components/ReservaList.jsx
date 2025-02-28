@@ -4,7 +4,7 @@ const ReservaList = ({ reservas }) => {
   return (
     <Box>
       <Typography variant="h6" color="primary" gutterBottom>
-        📋 Reservas Generadas
+        Reservas Generadas
       </Typography>
       {reservas.length === 0 ? (
         <Typography color="textSecondary">No hay reservas aún.</Typography>

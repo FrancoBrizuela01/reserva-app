@@ -16,7 +16,6 @@ const ReservaForm = ({ onReservar, reservas }) => {
       return;
     }
   
-    // Validación mejorada: Solo impedir la reserva si el mismo servicio ya está reservado en el mismo horario
     if (reservas.some((res) => res.horario === horario && res.servicio === servicio)) {
       alert("Ese horario ya está reservado para este servicio");
       return;
@@ -24,7 +23,6 @@ const ReservaForm = ({ onReservar, reservas }) => {
   
     onReservar({ cliente, servicio, horario });
   
-    // Resetear el formulario
     setCliente("");
     setServicio("");
     setHorario("");
@@ -34,7 +32,7 @@ const ReservaForm = ({ onReservar, reservas }) => {
   return (
     <Paper elevation={4} sx={{ p: 3, backgroundColor: "background.default", borderRadius: 3 }}>
       <Typography variant="h6" color="secondary" align="center" gutterBottom>
-        📝 Completa los datos para reservar
+        Completa los datos para reservar
       </Typography>
       <Stack spacing={2}>
         <TextField

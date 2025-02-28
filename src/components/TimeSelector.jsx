@@ -1,6 +1,6 @@
 import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 
-const horariosDisponibles = ["10:00", "12:00", "14:00", "16:00", "18:00"]; // <- Asegúrate de que esté aquí
+const horariosDisponibles = ["10:00", "12:00", "14:00", "16:00", "18:00"];
 
 const TimeSelector = ({ horario, setHorario, reservas, servicio }) => {
   const horariosFiltrados = horariosDisponibles.filter(

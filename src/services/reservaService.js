@@ -1,6 +1,5 @@
 import api from "./api";
 
-// Obtener todas las reservas
 export const obtenerReservas = async () => {
   try {
     const response = await api.get("/reserva");
@@ -11,7 +10,6 @@ export const obtenerReservas = async () => {
   }
 };
 
-// Crear una nueva reserva
 export const crearReserva = async (reserva) => {
   try {
     const response = await api.post("/reserva", reserva);
